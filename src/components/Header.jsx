@@ -1,12 +1,17 @@
 import { getRandomColor } from '../script';
+import { useState } from 'react';
 export const day = new Date();
+let timeIntervalId;
 const dayToStr = day.toDateString();
 const Header = () => {
+  const [hourToShow, setHourToShow] = useState();
   let hours = Number(day.getHours());
   let greet;
   let color;
   let image;
-
+  timeIntervalId = setInterval(() => {
+    setHourToShow(new Date().toLocaleTimeString());
+  }, 1000);
   if (hours >= 0 && hours < 7) {
     greet = 'Good night';
     color = 'lightblue';
@@ -43,8 +48,10 @@ const Header = () => {
           style={{ width: 300, height: 150 }}
           src={image}
           alt={`${greet}' image`}
-        />
-        <h3 style={{ color: getRandomColor() }}> {dayToStr}</h3>
+          />
+        <h3 style={{ color: getRandomColor() }}> {dayToStr}</h3>{' '}
+          <p className='fs-6 text-danger'>{hourToShow}</p>
+      
       </div>
       <h1 style={{ color: color }} className="text-center">
         {greet}
