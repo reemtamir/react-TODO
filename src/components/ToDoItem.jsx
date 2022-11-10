@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
 const ToDoItem = ({ task, handleIsCompleteChange, deleteToDo }) => {
-  console.log(task.isCompleted);
   const dateToString = task.createdAt.toString();
   let dayToShow = '';
   for (let i = 0; i < 25; i++) {
