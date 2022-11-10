@@ -1,10 +1,12 @@
 import './App.css';
 import Header from './components/Header';
 import ToDo from './components/ToDo';
+import Clock from './components/Clock';
 
 function App() {
   return (
-    <div className='m-auto text-center'>
+    <div className="m-auto text-center">
+      <Clock />
       <Header />
       <ToDo />
     </div>
