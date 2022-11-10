@@ -3,17 +3,15 @@ import TodoItem from './ToDoItem';
 const ToDoList = ({ todos, handleIsCompleteChange, deleteToDo }) => {
   return (
     <>
-      <ul >
-        {todos.map((todo) => {
-          return (
-            <TodoItem
-              key={todo.id}
-              task={{ ...todo }}
-              handleIsCompleteChange={() => handleIsCompleteChange(todo.id)}
-              deleteToDo={deleteToDo}
-            />
-          );
-        })}
+      <ul>
+        {todos.map((todo) => (
+          <TodoItem
+            key={todo.id}
+            task={{ ...todo }}
+            handleIsCompleteChange={() => handleIsCompleteChange(todo.id)}
+            deleteToDo={deleteToDo}
+          />
+        ))}
       </ul>
     </>
   );

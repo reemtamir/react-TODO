@@ -14,21 +14,13 @@ const ToDoItem = ({ task, handleIsCompleteChange, deleteToDo }) => {
   const [color, setColor] = useState('black');
   const editToto = () => {
     setIsReadOnly((isReadOnly) => !isReadOnly);
-    setEdit((edit) => {
-      return (edit = edit === 'Edit' ? 'Save' : 'Edit');
-    });
-    setHeight((height) => {
-      return (height = height === '' ? 70 : '');
-    });
+    setEdit((edit) => (edit = edit === 'Edit' ? 'Save' : 'Edit'));
+    setHeight((height) => (height = height === '' ? 70 : ''));
   };
   const markTxt = () => {
-    setMark((mark) => {
-      return (mark = mark === 'none' ? 'line-through' : 'none');
-    });
+    setMark((mark) => (mark = mark === 'none' ? 'line-through' : 'none'));
 
-    setColor((color) => {
-      return (color = color === 'red' ? 'black' : 'red');
-    });
+    setColor((color) => (color = color === 'red' ? 'black' : 'red'));
   };
   return (
     <>

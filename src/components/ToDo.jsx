@@ -10,12 +10,8 @@ const ToDo = () => {
     show: false,
     id: null,
   });
-  const handleDelete = (id) => {
-    setPopup({
-      show: true,
-      id,
-    });
-  };
+  const handleDelete = (id) => setPopup({ show: true, id });
+
   const handleDeleteTrue = () => {
     if (popup.show && popup.id) {
       let filteredData = todos.filter((todo) => todo.id !== popup.id);
@@ -26,12 +22,7 @@ const ToDo = () => {
       });
     }
   };
-  const handleDeleteFalse = () => {
-    setPopup({
-      show: false,
-      id: null,
-    });
-  };
+  const handleDeleteFalse = () => setPopup({ show: false, id: null });
 
   const handleIsCompleteChange = (id) => {
     setTodos((todos) =>
@@ -44,9 +35,7 @@ const ToDo = () => {
     );
   };
 
-  const deleteToDo = (e) => {
-    handleDelete(e.target.getAttribute('data-id'));
-  };
+  const deleteToDo = (e) => handleDelete(e.target.getAttribute('data-id'));
 
   return (
     <>
