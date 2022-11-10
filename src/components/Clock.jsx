@@ -6,6 +6,6 @@ const Clock = () => {
   clockIntervalId = setInterval(() => {
     setHourToShow(new Date().toLocaleTimeString());
   }, 1000);
-  return <p className="fs-6 text-danger">{hourToShow}</p>;
+  return <p className="fs-3 text-danger">{hourToShow}</p>;
 };
 export default Clock;
