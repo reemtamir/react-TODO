@@ -41,6 +41,10 @@ const ToDo = () => {
     <>
       <div className="top-container">
         <div className="container">
+          <div className="heading my-4">
+            <h1>To do list</h1>
+          </div>
+
           <ToDoForm
             onSubmit={(task) => {
               setTodos((todos) => [

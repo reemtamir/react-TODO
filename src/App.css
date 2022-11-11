@@ -1,6 +1,6 @@
 .top-container {
   background-color: #ffeaa7;
-  min-height: 70vh;
+  min-height: 50vh;
   padding: 1rem;
   box-sizing: border-box;
   display: flex;
@@ -21,4 +21,17 @@
   box-shadow: 4px 3px 7px 2px #00000040;
   padding: 1rem;
   box-sizing: border-box;
+}
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.heading h1 {
+  transform: rotate(2deg);
+  padding: 0.2rem 1.2rem;
+  border-radius: 20% 5% 20% 5%/5% 20% 25% 20%;
+  background-color: #fdcb6e;
+  font-size: 1.5rem;
 }
