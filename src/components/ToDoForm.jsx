@@ -29,7 +29,9 @@ const ToDoForm = ({ onSubmit }) => {
       <div className="ms-4  w-50 mb-5 ">
         <div className="input-group-text  ">
           <input
-            onClick={() => {setIsIn(true)}}
+            onClick={() => {
+              setIsIn(true);
+            }}
             className="form-control fs-2"
             onChange={(e) => {
               error = '';
