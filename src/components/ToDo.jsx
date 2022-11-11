@@ -39,31 +39,35 @@ const ToDo = () => {
 
   return (
     <>
-      <ToDoForm
-        onSubmit={(task) => {
-          setTodos((todos) => [
-            ...todos,
-            {
-              id: uuid(),
-              task: task,
-              isCompleted: false,
-              createdAt: day,
-            },
-          ]);
-        }}
-      />
-      <ToDoList
-        todos={todos}
-        handleIsCompleteChange={handleIsCompleteChange}
-        deleteToDo={deleteToDo}
-      />
+      <div className="top-container">
+        <div className="container">
+          <ToDoForm
+            onSubmit={(task) => {
+              setTodos((todos) => [
+                ...todos,
+                {
+                  id: uuid(),
+                  task: task,
+                  isCompleted: false,
+                  createdAt: day,
+                },
+              ]);
+            }}
+          />
+          <ToDoList
+            todos={todos}
+            handleIsCompleteChange={handleIsCompleteChange}
+            deleteToDo={deleteToDo}
+          />
 
-      {popup.show && (
-        <PopUp
-          handleDeleteTrue={handleDeleteTrue}
-          handleDeleteFalse={handleDeleteFalse}
-        />
-      )}
+          {popup.show && (
+            <PopUp
+              handleDeleteTrue={handleDeleteTrue}
+              handleDeleteFalse={handleDeleteFalse}
+            />
+          )}
+        </div>
+      </div>
     </>
   );
 };

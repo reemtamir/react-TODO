@@ -22,7 +22,7 @@ const ToDoForm = ({ onSubmit }) => {
 
   return (
     <>
-      <div className="ms-4  w-25 ">
+      <div className="ms-4  w-50 mb-5 ">
         <div className="input-group-text  ">
           <input
             className="form-control fs-2"
