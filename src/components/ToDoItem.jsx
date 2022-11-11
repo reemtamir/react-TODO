@@ -52,7 +52,7 @@ const ToDoItem = ({ task, handleIsCompleteChange, deleteToDo }) => {
                 onChange={handleIsCompleteChange}
               />
               <span>
-                Created:
+                Created :
                 <span className="fs-5 me-3">{dayToShow}</span>
               </span>
               <input
