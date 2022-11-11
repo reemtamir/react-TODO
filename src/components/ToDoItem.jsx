@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const ToDoItem = ({ task, handleIsCompleteChange, deleteToDo }) => {
   const dateToString = task.createdAt.toString();
@@ -34,7 +35,7 @@ const ToDoItem = ({ task, handleIsCompleteChange, deleteToDo }) => {
                 onClick={deleteToDo}
                 className="btn btn-danger me-3 "
               >
-                Delete
+                <DeleteIcon />
               </button>
               <button
                 onClick={editToto}

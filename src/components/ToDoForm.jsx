@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import AddTaskRoundedIcon from '@mui/icons-material/AddTaskRounded';
 
 let error = '';
 const ToDoForm = ({ onSubmit }) => {
@@ -47,7 +48,7 @@ const ToDoForm = ({ onSubmit }) => {
             onClick={addTask}
             className="btn ms-3"
           >
-            Add
+            <AddTaskRoundedIcon />
           </button>
         </div>
         <h2>{error}</h2>

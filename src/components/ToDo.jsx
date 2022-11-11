@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 import PopUp from './PopUp';
 import { day } from './Header';
+import ReceiptLongSharpIcon from '@mui/icons-material/ReceiptLongSharp';
 const ToDo = () => {
   const [todos, setTodos] = useState([]);
   const [popup, setPopup] = useState({
@@ -42,7 +43,10 @@ const ToDo = () => {
       <div className="top-container">
         <div className="container">
           <div className="heading my-4">
-            <h1>To do list</h1>
+            <h1>
+              To do list
+              <ReceiptLongSharpIcon />
+            </h1>
           </div>
 
           <ToDoForm
