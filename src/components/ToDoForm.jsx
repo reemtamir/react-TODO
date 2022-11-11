@@ -3,6 +3,7 @@ import { useState } from 'react';
 let error = '';
 const ToDoForm = ({ onSubmit }) => {
   const [task, setTask] = useState('');
+  const [isMouseOver, setIsHoverColor] = useState(false);
   const addTask = () => {
     if (task.length < 3) {
       error += 'Must be more then 2 characters';
@@ -11,6 +12,12 @@ const ToDoForm = ({ onSubmit }) => {
       onSubmit(task);
       setTask('');
     }
+  };
+  const handleMouseHover = () => {
+    setIsHoverColor(true);
+  };
+  const handleMouseOut = () => {
+    setIsHoverColor(false);
   };
 
   return (
@@ -30,7 +37,16 @@ const ToDoForm = ({ onSubmit }) => {
             value={task}
           />
 
-          <button onClick={addTask} className="btn btn-info ms-3">
+          <button
+            style={{
+              backgroundColor: isMouseOver ? 'lightgreen' : 'green',
+              color: 'white',
+            }}
+            onMouseOut={handleMouseOut}
+            onMouseOver={handleMouseHover}
+            onClick={addTask}
+            className="btn ms-3"
+          >
             Add
           </button>
         </div>

@@ -7,6 +7,7 @@ function App() {
   return (
     <div className="m-auto text-center">
       <Clock />
+      <br></br>
       <Header />
       <ToDo />
     </div>
