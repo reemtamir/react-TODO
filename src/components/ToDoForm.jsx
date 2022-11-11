@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import AddTaskRoundedIcon from '@mui/icons-material/AddTaskRounded';
+import { Fab } from '@mui/material';
 
 let error = '';
 const ToDoForm = ({ onSubmit }) => {
@@ -38,7 +39,7 @@ const ToDoForm = ({ onSubmit }) => {
             value={task}
           />
 
-          <button
+          <Fab
             style={{
               backgroundColor: isMouseOver ? 'lightgreen' : 'green',
               color: 'white',
@@ -49,7 +50,7 @@ const ToDoForm = ({ onSubmit }) => {
             className="btn ms-3"
           >
             <AddTaskRoundedIcon />
-          </button>
+          </Fab>
         </div>
         <h2>{error}</h2>
       </div>

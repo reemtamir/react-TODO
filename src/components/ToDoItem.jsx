@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import DeleteIcon from '@mui/icons-material/Delete';
-
 const ToDoItem = ({ task, handleIsCompleteChange, deleteToDo }) => {
   const dateToString = task.createdAt.toString();
   let dayToShow = '';
