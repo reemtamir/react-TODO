@@ -1,6 +1,9 @@
 .top-container {
-  background-color: #ffeaa7;
-  min-height: 50vh;
+  margin: auto;
+  background-color: #00238c;
+  background-image: url('https://transparenttextures.com/patterns/cubes.png');
+  max-width: 80%;
+  min-height: 70vh;
   padding: 1rem;
   box-sizing: border-box;
   display: flex;
@@ -13,8 +16,8 @@
 }
 .container {
   height: auto;
-
-  background: #f1f5f8;
+  min-height: 40vh;
+  background-color: #ffeaa7;
   background-image: radial-gradient(#bfc0c1 7.2%, transparent 0);
   background-size: 25px 25px;
   border-radius: 20px;
